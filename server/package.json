@@ -19,6 +19,8 @@
     "mongoose": "^5.9.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "install": "^0.13.0",
+    "nodemon": "^2.0.12",
+    "npm": "^7.21.1"
   }
 }
