@@ -12,7 +12,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  const [createUser, {error}] = useMutation(ADD_USER);
+  const [createUser] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -34,7 +34,8 @@ const SignupForm = () => {
         variables: { ...userFormData }
       });
 
-      Auth.login(data.createUser.token)
+      console.log(data.addUser.token);
+      Auth.login(data.addUser.token);
 
     } catch (err) {
       console.error(err);
