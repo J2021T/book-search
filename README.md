@@ -14,6 +14,7 @@ The project is a Google Books API search engine.  The API is now GraphQL built w
 ## Installation
 *  Clone repo
 *  Run ```npm i```
+*  Repeate ```npm i``` in server and client directories
 
 
 ## Usage

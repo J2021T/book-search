@@ -1,7 +1,7 @@
 {
   "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description The project is a Google Books API search engine.  The API is now GraphQL built with an Apollo Server.  The application is built using the MERN stack.  Users can save books to read and purchase in the future.",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -18,5 +18,13 @@
   "dependencies": {
     "apollo-server-express": "^3.3.0",
     "mongoose": "^6.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J2021T/book-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/J2021T/book-search/issues"
+  },
+  "homepage": "https://github.com/J2021T/book-search#readme"
 }
