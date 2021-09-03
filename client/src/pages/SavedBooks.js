@@ -28,8 +28,16 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await removeBook({
-        variables: { bookId }
+      await removeBook({
+        variables: { bookId: bookId },
+        update: cache => {
+          const data = cache.readQuery({ query: GET_ME });
+          const userCache = data.me;
+          const savedCache = userCache.savedBooks;
+          const newBookCache = savedCache.filter((book) => book.bookId !== bookId);
+          data.me.savedBooks = newBookCache;
+          cache.writeQuery({ query: GET_ME, data: {data: {...data.me.savedBooks}}});
+        }
       });
 
 
